@@ -1,0 +1,45 @@
+table {
+    border-collapse: collapse;
+    border-bottom: 2px solid #3f4259;
+    margin: auto;
+    margin-top: 10%;
+  }
+  th, td {
+    border: 1px solid #f6f5f4;
+    padding: 8px;
+  }
+  thead > tr {
+    background-color: bisque;
+    color: gainsboro;
+  }
+  tbody > tr:nth-child(odd) {
+    background-color: whitesmoke;
+  } 
+  tbody > tr:nth-child(even) {
+    background-color: whitesmoke;
+  } 
+  
+  body {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/86/Nesbru_videregående_skole_Asker_01.jpg);
+    background-size: cover;
+    font-family: Georgia, serif; 
+  }
+  #hoved {         
+    margin: 20px;         
+    padding: 20px;	             
+    background-color: white; 	 
+    border: 1px solid black;
+  }
+  h1 {
+    font-family: Arial, sans-serif; 
+    text-align: center;
+    color: green;
+  }
+  a {
+    font-family: Arial, sans-serif; 
+    text-align: center;
+    color: red;
+    margin-left: 650px;
+    font-size: 25px;
+    text-decoration: none;
+  }
