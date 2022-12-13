@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forside</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: royalblue;
+      text-align: center;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    li {
+      list-style: none;
+      font-size: 35px;
+      
+    }
+
+    h1 {
+      font-size: 50px;
+      color: green;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .kult {
+      animation: slide 3s ease-in-out infinite alternate;
+      background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+      bottom: 0;
+      left: -50%;
+      opacity: .5;
+      position: fixed;
+      right: -50%;
+      top: 0;
+      z-index: -1;
+    }
+
+  /*Bakgrunn aninamsjoner for forside*/
+
+    .kult2 {
+      animation-direction: alternate-reverse;
+      animation-duration: 4s;
+    }
+
+    .kult3 {
+      animation-duration: 5s;
+    }
+
+    .boks {
+      background-color: rgba(255, 255, 255, .8);
+      border-radius: .25em;
+      box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+      box-sizing: border-box;
+      left: 50%;
+      padding: 10vmin;
+      position: fixed;
+      text-align: center;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h1 {
+      font-family: monospace;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(-25%);
+      }
+
+      100% {
+        transform: translateX(25%);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="kult"></div>
+  <div class="kult kult2"></div>
+  <div class="kult kult3"></div>  
+
+  <div class="boks">  
+
+    <h1 style="text-align:center;"> Mine prosjekter </h1>
+    <li> <a href="vulvaen/bussen_index.html" target="_blank">Nettsiden min</a> </li>
+    <li> <a href="innlevering_index.html">Innleveringsoppgave</a> </li>
+    <li> <a href="periode/periodesystem_index.html">Periodesystem</a> </li>
+    <li> <a href="oving/tidkalkulator.html">Konverter tid</a> </li>
+    <li> <a href="oving/kalkis.html">kalkulator </a> </li>
+    <li> <a href="oving/tilfeldig.html">Hvilket begrep tilsvarer alder</a> </li>
+    <li> <a href="oving/gjettpassord.html">Gjett passord</a> </li>
+    <li> <a href="oving/funksjoner.html">Funksjoner øving </a> </li>
+    <li> <a href="spill/index.html">Yatzy for 4 </a> </li>
+    
+    
+    
+    <!--Alle oppgaver jeg har gjort med linker til de-->
+
+
+  </div>
+</body>
+
+</html>
