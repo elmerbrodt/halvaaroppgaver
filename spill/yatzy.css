@@ -1,0 +1,45 @@
+section{
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(5, 60px);
+    
+    
+}
+div{
+    border: solid 1px black;
+    background-color: white;
+}
+body{
+    display: grid;
+    place-content: center;
+}
+
+h1{
+    text-align: center;
+}
+
+#seksjon2{
+    grid-gap: 3px;
+    margin-top: 5%;
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+}
+
+#terningen{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.tabell{
+    text-align: center;
+}
+

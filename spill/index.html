@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spill</title>
+    <link rel="stylesheet" href="yatzy.css">
+</head>
+<body>
+    <h1>Yatzy for 4 spesielle</h1>
+    <section class="tabell">
+
+    <!--Hver eneste rad i spillet med farge og når man klikker på en boks kommer den funksjonen satt opp til boksen. 
+    Farge og og bakgrunnsfarge er stylet her, kunne gjort om for å få mer overskikt, men følte jeg hadde mer kontroll
+    når jeg stylet de her og ikke i css-->
+    
+        <div style="background-color: lightgrey;">Spillere</div>
+        <div style="color: green; background-color: lightgrey;">Kjekken</div>
+        <div style="color: orange; background-color: lightgrey;">Kula</div>
+        <div style="color: blue; background-color: lightgrey;">Søten</div>
+        <div style="color: red; background-color: lightgrey;">Krigeren</div>
+        <div style="background-color: lightgrey;">Enere</div>
+        <div class="rad1" style="color: green;" onclick="tallLagrer(1,1)"></div>
+        <div class="rad1" style="color: orange;" onclick="tallLagrer(1,2)"></div>
+        <div class="rad1" style="color: blue;" onclick="tallLagrer(1,3)"></div>
+        <div class="rad1" style="color: red;" onclick="tallLagrer(1,4)"></div>
+        <div style="background-color: lightgrey;">Toere</div>
+        <div class="rad2" style="color: green;"onclick="tallLagrer(2,1)"></div>
+        <div class="rad2" style="color: orange;" onclick="tallLagrer(2,2)"></div>
+        <div class="rad2" style="color: blue;" onclick="tallLagrer(2,3)"></div>
+        <div class="rad2" style="color: red;" onclick="tallLagrer(2,4)"></div>
+        <div style="background-color: lightgrey;">Treere</div>
+        <div class="rad3" style="color: green;" onclick="tallLagrer(3,1)"></div>
+        <div class="rad3" style="color: orange;" onclick="tallLagrer(3,2)"></div>
+        <div class="rad3" style="color: blue;" onclick="tallLagrer(3,3)"></div>
+        <div class="rad3" style="color: red;" onclick="tallLagrer(3,4)"></div>
+        <div style="background-color: lightgrey;">Firere</div>
+        <div class="rad4" style="color: green;" onclick="tallLagrer(4,1)"></div>
+        <div class="rad4" style="color: orange;" onclick="tallLagrer(4,2)"></div>
+        <div class="rad4" style="color: blue;" onclick="tallLagrer(4,3)"></div>
+        <div class="rad4" style="color: red;" onclick="tallLagrer(4,4)"></div>
+        <div style="background-color: lightgrey;">Femmere</div>
+        <div class="rad5" style="color: green;" onclick="tallLagrer(5,1)"></div>
+        <div class="rad5" style="color: orange;" onclick="tallLagrer(5,2)"></div>
+        <div class="rad5" style="color: blue;" onclick="tallLagrer(5,3)"></div>
+        <div class="rad5" style="color: red;" onclick="tallLagrer(5,4)"></div>
+        <div style="background-color: lightgrey;">Seksere</div>
+        <div class="rad6" style="color: green;" onclick="tallLagrer(6,1)"></div>
+        <div class="rad6" style="color: orange;" onclick="tallLagrer(6,2)"></div>
+        <div class="rad6" style="color: blue;" onclick="tallLagrer(6,3)"></div>
+        <div class="rad6" style="color: red;" onclick="tallLagrer(6,4)"></div>
+        <div style="background-color: lightgrey;">Sum</div>
+        <div class="rad7" style="color: green; background-color: lightgrey;" onclick="sum(7,1)"></div>
+        <div class="rad7" style="background-color: lightgrey; color: orange;" onclick="sum(7,2)"></div>
+        <div class="rad7" style="background-color: lightgrey; color: blue;" onclick="sum(7,3)"></div>
+        <div class="rad7" style="background-color: lightgrey;  color: red;" onclick="sum(7,4)"></div>
+        <div style="background-color: lightgrey;">Bonus</div>
+        <div class="rad8" style="color: green;" onclick="bonus(8,1)"></div>
+        <div class="rad8" style="color: orange;" onclick="bonus(8,2)"></div>
+        <div class="rad8" style="color: blue;" onclick="bonus(8,3)"></div>
+        <div class="rad8" style="color: red;" onclick="bonus(8,4)"></div>
+        <div style="background-color: lightgrey;">1 par</div>
+        <div class="rad9" style="color: green;" onclick="etPar(9,1)"></div>
+        <div class="rad9" style="color: orange;" onclick="etPar(9,2)"></div>
+        <div class="rad9" style="color: blue;" onclick="etPar(9,3)"></div>
+        <div class="rad9" style="color: red;" onclick="etPar(9,4)"></div>
+        <div style="background-color: lightgrey;">2 par</div>
+        <div class="rad10" style="color: green;" onclick=" toPar(10,1)"></div>
+        <div class="rad10" style="color: orange;" onclick=" toPar(10,2)"></div>
+        <div class="rad10" style="color: blue;" onclick=" toPar(10,3)"></div>
+        <div class="rad10" style="color: red;" onclick=" toPar (10,4)"></div>
+        <div style="background-color: lightgrey;">3 like</div>
+        <div class="rad11" style="color: green;" onclick="treLike(11,1)"></div>
+        <div class="rad11" style="color: orange;" onclick="treLike(11,2)"></div>
+        <div class="rad11" style="color: blue;" onclick="treLike(11,3)"></div>
+        <div class="rad11" style="color: red;" onclick="treLike(11,4)"></div>
+        <div style="background-color: lightgrey;">4 like</div>
+        <div class="rad12" style="color: green;" onclick=" fireLike(12,1)"></div>
+        <div class="rad12" style="color: orange;" onclick=" fireLike(12,2)"></div>
+        <div class="rad12" style="color: blue;" onclick=" fireLike(12,3)"></div>
+        <div class="rad12" style="color: red;" onclick=" fireLike(12,4)"></div>
+        <div style="background-color: lightgrey;">Liten Straight</div>
+        <div class="rad13" style="color: green;" onclick="litenStr(13,1)"></div>
+        <div class="rad13" style="color: orange;" onclick="litenStr(13,2)"></div>
+        <div class="rad13" style="color: blue;" onclick="litenStr(13,3)"></div>
+        <div class="rad13" style="color: red;" onclick="litenStr(13,4)"></div>
+        <div style="background-color: lightgrey;">Stor Straight</div>
+        <div class="rad14" style="color: green;" onclick="storStr(14,1)"></div>
+        <div class="rad14" style="color: orange;" onclick="storStr(14,2)"></div>
+        <div class="rad14" style="color: blue;" onclick="storStr(14,3)"></div>
+        <div class="rad14" style="color: red;" onclick="storStr(14,4)"></div>
+        <div style="background-color: lightgrey;">Hus</div>
+        <div class="rad15" style="color: green;" onclick="hus(15,1)"></div>
+        <div class="rad15" style="color: orange;" onclick="hus(15,2)"></div>
+        <div class="rad15" style="color: blue;" onclick="hus(15,3)"></div>
+        <div class="rad15" style="color: red;" onclick="hus(15,4)"></div>
+        <div style="background-color: lightgrey;">Sjanse</div>
+        <div class="rad16" style="color: green;" onclick="sjanse(16,1)"></div>
+        <div class="rad16" style="color: orange;" onclick="sjanse(16,2)"></div>
+        <div class="rad16" style="color: blue;" onclick="sjanse(16,3)"></div>
+        <div class="rad16" style="color: red;" onclick="sjanse(16,4)"></div>
+        <div style="font-weight:700; background-color: lightgrey;"">Yatzy</div>
+        <div class="rad17" style="color: green;" onclick="yatzy(17,1)"></div>
+        <div class="rad17" style="color: orange;" onclick="yatzy(17,2)"></div>
+        <div class="rad17" style="color: blue;" onclick="yatzy(17,3)"></div>
+        <div class="rad17" style="color: red;" onclick="yatzy(17,4)"></div>
+        <div style="background-color: lightgrey;">Totalsum</div>
+        <div class="rad18" style="color: green; background-color: lightgrey;" onclick="totalSum(18,1)"></div>
+        <div class="rad18" style="background-color: lightgrey; color: orange;" onclick="totalSum(18,2)"></div>
+        <div class="rad18" style="background-color: lightgrey; color: blue;" onclick="totalSum(18,3)"></div>
+        <div class="rad18" style="background-color: lightgrey; color: red;" onclick="totalSum(18,4)"></div>
+    </section>
+    <nav>
+        <button id="terningen"> Kast terningene </button>
+    </nav>
+    <section id="seksjon2">
+        <div class="terningResultat" onclick="gronn(1)"></div>
+        <div class="terningResultat" onclick="gronn(2)"></div>
+        <div class="terningResultat" onclick="gronn(3)"></div>
+        <div class="terningResultat" onclick="gronn(4)"></div>
+        <div class="terningResultat" onclick="gronn(5)"></div>
+    </section>
+<script src="yatzy.js"></script>
+</body>
+
+</html>
