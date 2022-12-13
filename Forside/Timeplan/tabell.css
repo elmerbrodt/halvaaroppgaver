@@ -1,0 +1,61 @@
+table {
+  border-collapse: collapse;
+  border-bottom: 2px solid #3f4259;
+  margin: auto;
+  margin-top: 10%;
+}
+
+th,
+td {
+  border: 1px solid #f6f5f4;
+  padding: 8px;
+}
+
+thead>tr {
+  background-color: bisque;
+  color: gainsboro;
+}
+
+tbody>tr:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+tbody>tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+body {
+  
+ 
+  font-family: Georgia, serif;
+}
+
+#hoved {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: green;
+}
+
+
+.nesbru{
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -10%);
+  font-size: 30px;
+  
+}
+
+a{
+  text-decoration: none;
+  color: #3f4259;
+  font-size: 25px;
+}

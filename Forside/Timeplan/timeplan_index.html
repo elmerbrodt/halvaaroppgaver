@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeplan</title>
+    <link rel="stylesheet" href="tabell.css">
+    <style>
+        .heia {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, red 50%, orange 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        /*Bakgrunn aninamsjoner for forside*/
+
+        .heia2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+
+        .heia3 {
+            animation-duration: 5s;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-25%);
+            }
+
+            100% {
+                transform: translateX(25%);
+            }
+        }
+
+        .Ukesknapper {
+            width: 90px;
+            height: 55px;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            
+            
+        }
+
+    
+    </style>
+</head>
+
+<body>
+    <div class="heia"></div>
+    <div class="heia heia2"></div>
+    <div class="heia heia3"></div>
+
+
+    <h1>Min timeplan 2 året på Nesbru VGS</h1>
+    <a class="nesbru" href="https://viken.no/nesbru-vgs/">Nesbru VGS hjemmeside link</a>
+    <div class="Ukesknapper">
+        <a href="#aUker">A uke</a> <br> <a href="#bUker">B uke</a>
+        <!--Knapper som viderefører til nederst på siden-->
+    </div>
+    <!--Link til nesbru sin hjemmeside-->
+    <table id="aUker">
+        <thead>
+            <!--toppen av siden-->
+            <tr>
+                <th style="color: red;">Mandag</th>
+                <th style="color: rgb(225, 0, 255);">Tirsdag</th>
+                <th style="color: green;">Onsdag</th>
+                <th style="color: orange;">Torsdag</th>
+                <th style="color: blue;">Fredag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="color: red;">Matte 08:30</td>
+                <td style="color: rgb(225, 0, 255);">IT 08:45</td>
+                <td style="color: green;">Norsk 08:15</td>
+                <td style="color: orange;">Tysk 10:00</td>
+                <td style="color: blue;">Matte 08:30</td>
+            </tr>
+            <tr>
+                <td style="color: red;">Engelsk 10:00</td>
+                <td style="color: rgb(225, 0, 255);">Matte 10:30</td>
+                <td style="color: green;">Historie 10:00</td>
+                <td style="color: orange;">IT 12:00</td>
+                <td style="color: blue;">Gym 10:00</td>
+            </tr>
+            <tr>
+                <td style="color: red;">Geofag 12:00</td>
+                <td style="color: rgb(225, 0, 255);">Tysk 12:15</td>
+                <td style="color: green;">Engelsk 12:15</td>
+                <td style="color: orange;">Ferdig 14:30</td>
+                <td style="color: blue;">Norsk 12:00</td>
+            </tr>
+            <tr>
+                <td style="color: red;">Ferdig 14:30</td>
+                <td style="color: rgb(225, 0, 255);">Ferdig 13:45</td>
+                <td style="color: green;">Ferdig 15:15</td>
+                <td>------</td>
+                <td style="color: blue;">Ferdig 15:15</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="bUker" style="margin-top: 1500px;">
+
+        <thead>
+            <!--nedre del av siden-->
+            <tr>
+                <th style="color: red;">Mandag</th>
+                <th style="color: rgb(225, 0, 255);">Tirsdag</th>
+                <th style="color: green;">Onsdag</th>
+                <th style="color: orange;">Torsdag</th>
+                <th style="color: blue;">Fredag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="color: red;">Matte 08:30</td>
+                <td style="color: rgb(225, 0, 255);">IT 08:45</td>
+                <td style="color: green;">Norsk 08:15</td>
+                <td style="color: orange;">Tysk 10:00</td>
+                <td style="color: blue;">Matte 08:30</td>
+            </tr>
+            <tr>
+                <td style="color: red;">Historie 10:00</td>
+                <td style="color: rgb(225, 0, 255);">Matte 10:30</td>
+                <td style="color: green;">Geofag 10:00</td>
+                <td style="color: orange;">IT 12:00</td>
+                <td style="color: blue;">Engelsk 10:00</td>
+            </tr>
+            <tr>
+                <td style="color: red;">Geofag 12:00</td>
+                <td style="color: rgb(225, 0, 255);">Tysk 12:15</td>
+                <td style="color: green;">Engelsk 12:15</td>
+                <td style="color: orange;">Ferdig 14:30</td>
+                <td style="color: blue;">Norsk 12:00</td>
+            </tr>
+            <tr>
+                <td style="color: red;">Ferdig 14:30</td>
+                <td style="color: rgb(225, 0, 255);">Ferdig 13:45</td>
+                <td style="color: green;">Ferdig 15:15</td>
+                <td>------</td>
+                <td style="color: blue;">Ferdig 15:15</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="ukeknappene">
+        <a href="#aUker">A uke</a> <br> <a href="#bUker">B uke</a>
+</body>
+
+</html>
