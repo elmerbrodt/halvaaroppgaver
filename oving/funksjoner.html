@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funksjoner</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+
+        }
+
+        button {
+            font-size: 30px;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Inspiser side for å se konsoll og svar av funksjonene</h1>
+    <button onclick="tilfeldigHilsen()"> En tilfeldig hilsen </button>
+    <button onclick="kvadrat(9)"> Kvadrat til 9 </button>
+    <button onclick="sum(4, 7)"> Sum av 4 og 7 </button>
+    <button onclick="skrivUtGangetabell(10)"> Gangetabellen av 10 </button>
+
+    <script>
+        function tilfeldigHilsen() {
+
+            const ordene = [
+
+                "Hei",
+
+                "Hello",
+
+                "God dag"
+            ]
+
+            let ordet = parseInt(Math.random() * 3);
+
+            console.log(ordene[ordet]);
+
+        }
+
+
+        function kvadrat(a) {
+
+            console.log(a * a)
+        }
+
+
+
+        function sum(a, b) {
+
+            console.log(a + b)
+        }
+
+        function skrivUtGangetabell(tall) {
+
+            for (let i = 1; i <= 20; i++) {
+                console.log(tall * i)
+            }
+        }
+
+        function terning() {
+            return Math.floor(Math.random() * 6) + 1;
+
+        }
+
+
+    </script>
+</body>
+
+</html>
