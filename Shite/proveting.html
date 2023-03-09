@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style> 
+    div{
+        position: absolute;
+        background-color: blue;
+        width: 50px;
+        height: 50px; 
+        border-radius: 50%;
+    }
+</style>
+
+<p id="stillingSpiller1">0</p>
+<p id="stillingSpiller2">0</p>
+
+<input id="farge" type="color">
+<script>
+    var stillingP = document.getElementById("stillingSpiller1");
+    var stilling = 0;
+
+    var stillingP2 = document.getElementById("stillingSpiller2");
+    var stilling2 = 0;
+    
+    var fjern = function(evt){
+        evt.stopPropagation();
+        document.body.removeChild(evt.target);
+        stilling++
+        stillingP.innerHTML = stilling;
+        stilling2++
+        stillingP2.innerHTML = stilling2;
+        
+    }
+    window.onclick = function(evt) {
+        var mittElement = document.createElement("div");
+        mittElement.style.top = evt.clientY - 25 + "px";
+        mittElement.style.left = evt.clientX - 25 + "px";
+        mittElement.style.backgroundColor = farge.value 
+        mittElement.onclick = fjern;
+        document.body.appendChild(mittElement);
+    }
+
+    farge.onclick = function(evt){
+        evt.stopPropagation();
+    }
+
+
+function startDrag(evt) {
+    dragging = true;
+    dragStartX = evt.clientX;
+    dragStartY = evt.clientY;
+    var dot = evt.target;
+    offsetX = parseInt(dot.style.left) - dragStartX;
+    offsetY = parseInt(dot.style.top) - dragStartY;
+}
+
+function drag(evt) {
+    if (dragging) {
+        var dot = evt.target;
+        dot.style.left = (evt.clientX + offsetX) + 'px';
+        dot.style.top = (evt.clientY + offsetY) + 'px';
+    }
+}
+
+function endDrag(evt) {
+    dragging = false;
+}
+
+function addDot(evt) {
+    var mittElement = document.createElement("div");
+    mittElement.style.top = evt.clientY - 25 + "px";
+    mittElement.style.left = evt.clientX - 25 + "px";
+    mittElement.style.backgroundColor = farge.value 
+    mittElement.onclick = fjern;
+    mittElement.addEventListener('mousedown', startDrag);
+    mittElement.addEventListener('mousemove', drag);
+    mittElement.addEventListener('mouseup', endDrag);
+    document.body.appendChild(mittElement);
+}
+
+function fjern(evt) {
+    evt.stopPropagation();
+    document.body.removeChild(evt.target);
+}
+
+farge.onclick = function(evt){
+    evt.stopPropagation();
+}
+
+window.onclick = addDot;
+
+
+
+
+
+</script>
+
+</body>
+</html>
+

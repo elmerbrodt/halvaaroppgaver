@@ -1,0 +1,46 @@
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    div{
+        position: absolute;
+        background-color: red;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+</style>
+<input id="farge" type="color">
+    <script>
+        var fjern = function(evt) {
+            evt.stopPropagation();
+            var minAnim = evt.target.animate([{transform:"scale(1)"},{transform:"scale(2)"}],5000)
+            
+
+            minAnim.onfinish = function() {
+                document.body.removeChild(evt.target);
+            }
+
+        }
+
+        var farge = document.getElementById("farge")
+        window.onclick = function(evt) {
+            var mittElement = document.createElement("div");
+            mittElement.style.top = evt.clientY - 25 + "px";
+            mittElement.style.left = evt.clientX - 25 + "px";
+            mittElement.style.backgroundColor = farge.value
+            mittElement.onclick = fjern;
+            document.body.appendChild(mittElement);
+        }
+        farge.onclick = function(evt) {
+            evt.stopPropagation();
+        }
+    </script>
+    
+</body>
+</html>

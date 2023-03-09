@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .hele {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            height: 100vh;
+        }
+
+        #board1, #board2 {
+            width: 50%;
+            height: 100%;
+        }
+
+        #board1 {
+            background-color: #c5e5fc;
+        }
+
+        #board2 {
+            background-color: #fcd5c5;
+        }
+
+        .dot {
+            position: absolute;
+            background-color: blue;
+            width: 50px;
+            height: 50px; 
+            border-radius: 50%;
+        }
+
+        #stillingSpiller1, #stillingSpiller2 {
+            position: absolute;
+            top: 10px;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="hele">
+        <div id="board1">
+            <p id="stillingSpiller1">0</p>
+        </div>
+        <div id="board2">
+            <p id="stillingSpiller2">0</p>
+        </div>
+    </div>
+    
+    <input id="farge" type="color">
+
+    <script>
+        var stillingP1 = document.getElementById("stillingSpiller1");
+        var stilling1 = 0;
+
+        var stillingP2 = document.getElementById("stillingSpiller2");
+        var stilling2 = 0;
+        
+        var fjern = function(evt){
+            evt.stopPropagation();
+            var dot = evt.target;
+            if (dot.parentNode.id === "board1") {
+                stilling1++;
+                stillingP1.innerHTML = stilling1;
+            } else {
+                stilling2++;
+                stillingP2.innerHTML = stilling2;
+            }
+            dot.parentNode.removeChild(dot);
+        }
+
+     
+        var addDot = function(evt, board) {
+            var mittElement = document.createElement("div");
+            mittElement.className = "dot";
+            mittElement.style.top = evt.clientY - 25 + "px";
+            mittElement.style.left = evt.clientX - 25 + "px";
+            mittElement.style.backgroundColor = farge.value;
+            mittElement.onclick = fjern;
+            board.appendChild(mittElement);
+
+        }
+
+        var board1 = document.getElementById("board1");
+        board1.onclick = function(evt) {
+            evt.stopPropagation();
+            addDot(evt, board1);
+        }
+
+        var board2 = document.getElementById("board2");
+        board2. onclick = function(evt) {
+            evt.stopPropagation();
+            addDot(evt, board2);
+        }
+
+        farge.onclick = function(evt){
+            evt.stopPropagation();
+        }
+
+      
+</script>
+</body>
+</html>
