@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sporsmaal</title>
+
+    <style>
+        html{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="sporsmaal">Her er spørsmålet</h1>
+    <input type="text" id="inpSvar">
+    <button id="btnOK">Klikk her for å avlevere ditt sv ar</button>
+    <button id="btnForrige">Forrige</button>
+    <button id="btnNeste">Neste</button> 
+    <h5 id="alternativ1">alternativ1</h5>
+    <h5 id="alternativ2">alternativ2</h5>
+    <h5 id="alternativ3">alternativ3</h5>
+
+    <img id="bilde" src="" alt="bilde til spørsmålet">
+
+    <script>
+        var sporsmaal = document.getElementById("sporsmaal");
+        var inpSvar = document.getElementById("inpSvar");
+        var btnOK = document.getElementById("btnOK");
+        var btnNeste = document.getElementById("btnNeste");
+        var btnForrige = document.getElementById("btnForrige");
+        var spmNr = 0;
+        let bilde = document.getElementById("bilde");   
+        var alternativ1 = document.getElementById("alternativ1")
+        var alternativ2 = document.getElementById("alternativ2")
+        var alternativ3 = document.getElementById("alternativ3")
+        let riktigSvarLyd = new Audio('yeah.mp3')
+        let feilSvarLyd = new Audio('youTrash.mp3')
+       
+
+        var spmOgSvar = [
+            { q: "Hvilket lag vant eliteserien (menn) i fotball i 2022?", a1: "1. Molde", a2: "2. Bodø Glimt", a3: "3. Rosenborg", riktigSvar: "Molde",  bilde: "bodoglimt.png"},
+            { q: "Hvilken by er hovedstaden i Danmark", a1: "1. Stockholm", a2: "2. København", a3: "3. Ålborg" , riktigSvar: "København", bilde: "https://blog.norwegianreward.com/wp-content/uploads/2022/04/Copenhagen-10-things-to-do-in-copenhagen-936x450-1.jpg"},
+            { q: "Har norge over, under eller akkurat 5 millioner innbyggere", a1: "1. Over", a2: "2. under" , a3: "3. akk 5 mil", riktigSvar: "Over", bilde: "standard_norge.jpg"},
+        ]
+     
+        function settOppskjermbilde (){
+            sporsmaal.innerHTML = spmOgSvar [spmNr].q;
+            bilde.src = spmOgSvar[spmNr].bilde;
+            alternativ1.innerHTML = spmOgSvar[spmNr].a1;
+            alternativ2.innerHTML = spmOgSvar[spmNr].a2;
+            alternativ3.innerHTML = spmOgSvar[spmNr].a3;
+        }
+
+        settOppskjermbilde()    
+
+
+        sporsmaal.innerHTML = spmOgSvar[0].q;
+        bilde.scr = spmOgSvar[0].bilde
+
+        function sjekkSvar() {
+            if (inpSvar.value == spmOgSvar[spmNr].riktigSvar) {
+                riktigSvarLyd.play()
+                alert("Det var riktig, du har hvertfall litt IQ :)))",)
+            }
+          
+            else {
+                feilSvarLyd.play()
+                alert("Nå var du veldig dum??")
+            }
+        }
+        btnOK.addEventListener("click", sjekkSvar);
+    
+
+        function nesteSpm() {
+            spmNr++
+            settOppskjermbilde ()
+         
+        }
+        btnNeste.addEventListener("click", nesteSpm);
+        
+
+        function forrigeSpm() {
+            spmNr=spmNr-1;
+            settOppskjermbilde();
+        }
+        btnForrige.addEventListener("click", forrigeSpm);
+    </script>
+</body>
+
+</html>
