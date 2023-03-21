@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+
+    #bakgrunnsBilde {
+        position: absolute;
+        top: 44%;
+        height: 220px;
+        width: 180px;
+        margin-left: 480px;
+        background-color: yellow;
+        background-image: url(./seb.pdf);
+        transform: rotate(-15deg);
+        border: solid 5px black;
+        z-index: 700;
+        }
+
+    #hovedBilde {
+        position: absolute;
+        top: 46%;
+        height: 220px;
+        width: 180px;
+        margin-left: 490px;
+        background-color: black;
+        transform: rotate(-15deg);
+        border: solid 5px black;
+        z-index: 500;
+        }
+
+    #skole {
+        text-align: center;
+    }
+
+    #navn {
+        position: absolute;
+        text-align: right;
+        left: 350px;
+        top: 130px;
+    }
+
+    #adresse {
+        position: absolute;
+        text-align: right;
+        left: 350px;
+        top: 150px
+    }
+
+    #telefonNummer {
+        position: absolute;
+        text-align: right;
+        left: 350px;
+        top: 170px
+    }
+
+    #sitat1 {
+        position: absolute;
+        text-align: right;
+        left: 290px;
+        top: 250px
+    }
+
+    #sitat2 {
+        position: absolute;
+        text-align: right;
+        left: 290px;
+        top: 230px
+    }
+
+    /* kommentar */
+    #rodMal {
+        position: absolute;
+        border: solid 2px;
+        margin-top: 15%;
+        margin-left: 30%;
+        width: 45vw;
+        height: 42vh;
+        background: hsla(0, 51%, 92%, 1);
+        background: radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(0, 85%, 56%, 1) 36%);
+        background: -moz-radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(0, 85%, 56%, 1) 36%);
+        background: -webkit-radial-gradient(circle, hsla(0, 51%, 92%, 1) 0%, hsla(0, 85%, 56%, 1) 36%);
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#f5e0e0", endColorstr="#ee3232", GradientType=1);
+        }
+
+        /* kommentar */
+        #tittelRod {
+            height: 13.5vh;
+            margin-left: 48%;
+            margin-top: 10%;
+        }
+
+        /* kommentar */
+        #blaaMal {
+        position: absolute;
+        border: solid 2px;
+        margin-top: 15%;
+        margin-left: 30%;
+        width: 45vw;
+        height: 42vh;
+        z-index: 400;
+        background: hsla(0, 0%, 100%, 1);
+        background: radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(227, 74%, 61%, 1) 36%, hsla(227, 74%, 56%, 1) 100%, hsla(227, 74%, 56%, 1) 100%);
+        background: -moz-radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(227, 74%, 61%, 1) 36%, hsla(227, 74%, 56%, 1) 100%, hsla(227, 74%, 56%, 1) 100%);
+        background: -webkit-radial-gradient(circle, hsla(0, 0%, 100%, 1) 0%, hsla(227, 74%, 61%, 1) 36%, hsla(227, 74%, 56%, 1) 100%, hsla(227, 74%, 56%, 1) 100%);
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#5171E5", GradientType=1 );
+        }
+
+        /* kommentar */
+        #tittelBlaa {
+            height: 13.5vh;
+            position: absolute;
+            top: 45px;
+            left: 300px;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+   
+    <form action="">
+    <h1>Lag ditt russekort</h1>
+   
+   
+
+    <div id="blaaMal">
+        <h2 id="skole" contenteditable="true">Nesbru VGS</h3>
+        <h3 id="navn" contenteditable="true">Elmer Neeraas Brodtkorb</h3>
+        <h3 id="adresse" contenteditable="true">ADR: Semsvann </h3>
+        <h3 id="telefonNummer" contenteditable="true"> TLF: 69494969</h3>
+        <h3 id="sitat1" contenteditable="true"> Hallaballa hvordan går det med deg,   kul</h3>
+        <h3 id="sitat2" contenteditable="true"> Nei, takk for det, håper alt går fint  deg</h3>
+        <img id="tittelBlaa" src="blaaruss.tittel.png" alt="">
+    </div>
+
+    <div id="hovedBilde"></div>
+    <div id="bakgrunnsBilde"></div>
+
+    <h3>Velg en farge</h3>
+        <label for="farge">Rød:</label>
+        <input type="radio" name="farge" id="roodRadio">
+
+        <label for="farge">Blå:</label>
+        <input type="radio" name="farge" id="blaaRadio">
+
+    <script src="russekort.js"></script>
+
+
+<!-- Kodet tatt opp fra internett der en bruker legge til eget bilde, funker bare for meg, og ikke for delte brukere
+Kilde: reddit.com-->
+
+    <h1>Last opp bilde  </h1>
+	<form action="#" method="post" enctype="multipart/form-data">
+		<label for="picture">Velg bilde:</label>
+		<input type="file" name="picture" id="picture"><br><br>
+		<input type="submit" value="Last opp bilde ">
+	</form>
+
+  <h4> Endre russekort i russekortet -----></h4>
+</body>
+    
+
+</html>
+
+
+
+
+
